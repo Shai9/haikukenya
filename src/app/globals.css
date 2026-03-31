@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+@layer base {
+  h1 {
+    /* Fluid size: Min 3rem, Max 8rem, scales with viewport */
+    font-size: clamp(3rem, 15vw, 8rem) !important;
+    line-height: 0.85 !important;
+    letter-spacing: -0.05em !important;
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 10vw, 4rem) !important;
+    line-height: 0.9 !important;
+  }
+}
+
+@layer utilities {
+  .mobile-grid-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+}
+
 @theme {
   --font-sans: var(--font-bricolage), ui-sans-serif, system-ui;
   --color-primary: #10b981; /* Emerald 500 */
